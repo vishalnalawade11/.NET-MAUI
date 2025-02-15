@@ -18,7 +18,9 @@
 
         <Border Grid.Row="0"
                BackgroundColor="{StaticResource SectionsColor}"
-               Stroke="Transparent">
+               Stroke="Transparent"
+               StrokeShape="RoundRectangle 10">
+
             <Grid>
                 <Grid.RowDefinitions>
                     <RowDefinition Height=".1*"></RowDefinition>
@@ -49,9 +51,8 @@
 
                 <BoxView Grid.Row="1"
                          Grid.Column="1"
-                         Color="{StaticResource DarkFont}"
-                         VerticalOptions="Center" />
-
+                         BackgroundColor="#adadad"
+                         Margin="0,15" />
 
                 <VerticalStackLayout Grid.Row="1"
                                      Grid.Column="2"
@@ -60,6 +61,13 @@
                     <Label Text="SUBTOTAL"
                            TextColor="{StaticResource LightFont}" />
                     <Label x:Name="lblSubtotal"
+                           FontAttributes="Bold"
+                           Text="$0.00"
+                           TextColor="{StaticResource LightFont}" />
+                    <Label Margin="0,10,0,0"
+                           Text="TIP"
+                           TextColor="{StaticResource LightFont}" />
+                    <Label x:Name="lblTipByPerson"
                            FontAttributes="Bold"
                            Text="$0.00"
                            TextColor="{StaticResource LightFont}" />
