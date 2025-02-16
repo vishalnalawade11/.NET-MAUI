@@ -97,6 +97,7 @@
                    x:Name="txtBill"
                    Text="0.0"
                    Keyboard="Numeric"
+                   Completed="txtBill_Completed"
                    TextColor="{StaticResource LightFont}"
                    BackgroundColor="{StaticResource SectionsColor}"
                    VerticalOptions="Center"/>
@@ -110,11 +111,14 @@
                                    HorizontalOptions="Center"
                                    Spacing="10">
                 <Button Text="10%"
-                        WidthRequest="70" />
+                        WidthRequest="70"
+                        Clicked="Button_Clicked"/>
                 <Button Text="15%"
-                        WidthRequest="70" />
+                        WidthRequest="70"
+                        Clicked="Button_Clicked"/>
                 <Button Text="20%"
-                        WidthRequest="70" />
+                        WidthRequest="70"
+                        Clicked="Button_Clicked"/>
             </HorizontalStackLayout>
             <Label x:Name="lblTip"
                    Grid.Row="2"
@@ -125,7 +129,8 @@
                     Grid.Row="2"
                     Grid.Column="1"
                     Maximum="50"
-                    Minimum="0" />
+                    Minimum="0"
+                    ValueChanged="sldTip_ValueChanged"/>
 
             <Label Grid.Row="3"
                    Text="Split the total"
@@ -137,7 +142,8 @@
                                    VerticalOptions="Center">
                 <Button x:Name="btnMinus"
                         Text="-"
-                        WidthRequest="70" />
+                        WidthRequest="70"
+                        Clicked="btnMinus_Clicked"/>
                 <Label x:Name="lblNoPerson"
                        BackgroundColor="{StaticResource SectionsColor}"
                        FontSize="25"
@@ -151,7 +157,8 @@
                        WidthRequest="100" />
                 <Button x:Name="btnPlus"
                         WidthRequest="70"
-                        Text="+" />
+                        Text="+"
+                        Clicked="btnPlus_Clicked"/>
             </HorizontalStackLayout>
         </Grid>
     </Grid>
